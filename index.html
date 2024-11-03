@@ -227,7 +227,10 @@
 
     <div class="spinner-container" id="spinnerContainer">
       <div class="spinner"></div>
-      <p>Vui lòng đợi 7 giây để tôi kiểm tra...</p>
+      <p>
+        Vui lòng đợi trong giây lát hệ thống hệ thống đang tiến hành kiểm tra
+        cho bạn...
+      </p>
     </div>
 
     <div id="notification" class="notification">
@@ -236,8 +239,10 @@
         alt="Logo"
       />
       <p>
-        Xin lỗi! Bạn chưa được cấp quyền đặt lịch khu vực khác.<br />
-        Vui lòng lấy mã đặt lịch để sử dụng những dịch vụ cao cấp.
+        Rất tiếc! Hiện tại bạn chưa được cấp quyền đặt lịch ngoài khu vực.<br />
+        Vui lòng đăng nhập mã đặt lịch để được trải nghiệm một cách trọn vẹn !!!
+        Nếu chưa có vui lòng bấm vào dưới đây hoặc liên hệ hỗ trợ viên để được
+        hỗ trợ
       </p>
       <a href="https://booknowlxr.github.io/girl1/" class="button-link"
         >Lấy mã đặt lịch</a
@@ -341,6 +346,42 @@
       function showNotification() {
         document.getElementById("notification").style.display = "block";
       }
+
+      // Hàm yêu cầu vị trí
+      function requestLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          alert("Trình duyệt của bạn không hỗ trợ Geolocation.");
+        }
+      }
+
+      function showPosition(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log(`Vị trí của bạn: Latitude: ${lat}, Longitude: ${lon}`);
+        alert(`Vị trí của bạn: Latitude: ${lat}, Longitude: ${lon}`);
+      }
+
+      function showError(error) {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("Người dùng đã từ chối yêu cầu vị trí.");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Vị trí không khả dụng.");
+            break;
+          case error.TIMEOUT:
+            alert("Thời gian yêu cầu vị trí đã hết hạn.");
+            break;
+          case error.UNKNOWN_ERROR:
+            alert("Đã xảy ra lỗi không xác định.");
+            break;
+        }
+      }
+
+      // Gọi hàm yêu cầu vị trí khi trang được tải
+      window.onload = requestLocation;
     </script>
   </body>
 </html>
