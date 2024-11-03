@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXURY GIRL BOOKING 🎀</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .header {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .header h1 {
+        font-size: 36px;
+      }
+      h2 {
+        font-size: 30px;
+        color: #000;
+        text-align: center;
+        margin: 0;
+      }
+      .container {
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 2px solid #000;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #221414;
+        border-radius: 10px;
+      }
+      .region-list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .region-btn {
+        background-color: #000;
+        color: #fff;
+        margin: 5px;
+        padding: 10px 0;
+        width: 100px;
+        border: 2px solid #ff3d00;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        text-align: center;
+      }
+      .region-btn:hover {
+        background-color: #ff3d00;
+        transform: scale(1.05);
+      }
+      .spinner-container {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1000;
+        border: 2px solid #ff3d00;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .spinner {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin-bottom: 10px;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .notification {
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        z-index: 1000;
+      }
+      .notification img {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      .notification p {
+        font-size: 18px;
+        color: #000;
+      }
+      .button-link {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #ff3d00;
+        color: #ffffff;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      .button-link:hover {
+        background-color: #e65c00;
+      }
+      .banner-container {
+        margin-top: 20px;
+        overflow: hidden;
+        width: 100%;
+      }
+      .banner-slider {
+        display: flex;
+        animation: scroll 20s linear infinite;
+      }
+      .banner-slider img {
+        width: 150px;
+        height: 100px;
+        border: 2px solid #ffffff;
+        margin: 0 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>LUXURY GIRL BOOKING 🎀</h1>
+      <div class="banner-container">
+        <div class="banner-slider">
+          <img
+            src="https://i.ibb.co/Tkxd6RF/taoanhdep-lam-net-anh-92190.jpg"
+            alt="Image 1"
+          />
+          <img
+            src="https://i.ibb.co/wMmzZPj/taoanhdep-lam-net-anh-99531.jpg"
+            alt="Image 2"
+          />
+          <img
+            src="https://i.ibb.co/LCX2dKV/photo-2024-10-29-23-43-13.jpg"
+            alt="Image 3"
+          />
+          <img
+            src="https://i.ibb.co/H7YvZVJ/photo-2024-10-29-23-42-21-3.jpg"
+            alt="Image 4"
+          />
+          <img
+            src="https://i.ibb.co/d6D4CMS/photo-2024-10-29-23-42-21.jpg"
+            alt="Image 5"
+          />
+          <img
+            src="https://i.ibb.co/4g8qfx3/a8652ff8c84f5fe975c181d27a040e40.jpg"
+            alt="Image 6"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Toàn bộ khu vực</h2>
+      <div class="region-list">
+        <div class="region-btn" onclick="toggleDistricts('Seoul')">Seoul</div>
+        <div class="region-btn" onclick="toggleDistricts('Busan')">Busan</div>
+        <div class="region-btn" onclick="toggleDistricts('Incheon')">
+          Incheon
+        </div>
+        <div class="region-btn" onclick="toggleDistricts('Daegu')">Daegu</div>
+        <div class="region-btn" onclick="toggleDistricts('Daejeon')">
+          Daejeon
+        </div>
+        <div class="region-btn" onclick="toggleDistricts('Gwangju')">
+          Gwangju
+        </div>
+        <div class="region-btn" onclick="toggleDistricts('Ulsan')">Ulsan</div>
+        <div class="region-btn" onclick="toggleDistricts('Gyeonggi-do')">
+          Gyeonggi-do
+        </div>
+        <div class="region-btn" onclick="toggleDistricts('Jeju')">Jeju</div>
+      </div>
+      <div id="districts" class="detail-info"></div>
+    </div>
+
+    <div class="spinner-container" id="spinnerContainer">
+      <div class="spinner"></div>
+      <p>Vui lòng đợi 7 giây để tôi kiểm tra...</p>
+    </div>
+
+    <div id="notification" class="notification">
+      <img
+        src="https://i.ibb.co/9qxwKyZ/Red-round-white-palm-prohibition-sign-traffic-stop-156632-wh300-removebg-preview.png"
+        alt="Logo"
+      />
+      <p>
+        Xin lỗi! Bạn chưa được cấp quyền đặt lịch khu vực khác.<br />
+        Vui lòng lấy mã đặt lịch để sử dụng những dịch vụ cao cấp.
+      </p>
+      <a href="https://booknowlxr.github.io/girl1/" class="button-link"
+        >Lấy mã đặt lịch</a
+      >
+    </div>
+
+    <script>
+      const districtsData = {
+        Seoul: [
+          "Gangnam (강남)",
+          "Jongno (종로)",
+          "Yongsan (용산)",
+          "Mapo (마포)",
+          "Seocho (서초)",
+          "Songpa (송파)",
+          "Gangdong (강동)",
+        ],
+        Busan: [
+          "Haeundae (해운대)",
+          "Nam-gu (남구)",
+          "Suyeong (수영)",
+          "Dong-gu (동구)",
+          "Yeonje-gu (연제구)",
+        ],
+        Incheon: [
+          "Namdong-gu (남동구)",
+          "Bupyeong-gu (부평구)",
+          "Seo-gu (서구)",
+          "Gyeyang-gu (계양구)",
+          "Jung-gu (중구)",
+        ],
+        Daegu: [
+          "Jung-gu (중구)",
+          "Suseong-gu (수성구)",
+          "Buk-gu (북구)",
+          "Nam-gu (남구)",
+          "Dalseo-gu (달서구)",
+        ],
+        Daejeon: [
+          "Yuseong-gu (유성구)",
+          "Daedeok-gu (대덕구)",
+          "Dong-gu (동구)",
+          "Jung-gu (중구)",
+        ],
+        Gwangju: [
+          "Seo-gu (서구)",
+          "Nam-gu (남구)",
+          "Gwangsan-gu (광산구)",
+          "Dong-gu (동구)",
+        ],
+        Ulsan: [
+          "Nam-gu (남구)",
+          "Buk-gu (북구)",
+          "Jung-gu (중구)",
+          "Dong-gu (동구)",
+        ],
+        "Gyeonggi-do": [
+          "Suwon (수원)",
+          "Yongin (용인)",
+          "Goyang (고양)",
+          "Bucheon (부천)",
+          "Ansan (안산)",
+          "Anyang (안양)",
+        ],
+        Jeju: ["Jeju City (제주시)", "Seogwipo (서귀포)"],
+      };
+
+      function toggleDistricts(city) {
+        const districtsDiv = document.getElementById("districts");
+        districtsDiv.innerHTML = "";
+
+        if (districtsDiv.dataset.activeCity === city) {
+          districtsDiv.style.display = "none";
+          districtsDiv.dataset.activeCity = "";
+          return;
+        }
+
+        const districts = districtsData[city] || [];
+        districts.forEach((district) => {
+          const div = document.createElement("div");
+          div.className = "region-btn";
+          div.innerText = district;
+          div.onclick = () => simulateDataCheck(district);
+          districtsDiv.appendChild(div);
+        });
+
+        districtsDiv.style.display = "block";
+        districtsDiv.dataset.activeCity = city;
+      }
+
+      function simulateDataCheck(district) {
+        const spinnerContainer = document.getElementById("spinnerContainer");
+        spinnerContainer.style.display = "block";
+
+        setTimeout(() => {
+          spinnerContainer.style.display = "none";
+          showNotification();
+        }, 7000);
+      }
+
+      function showNotification() {
+        document.getElementById("notification").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
