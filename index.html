@@ -37,7 +37,7 @@
       }
       h2 {
         font-size: 27px;
-        color: #000;
+        color: #1eff00;
         text-align: center;
         margin: 0;
       }
@@ -48,7 +48,7 @@
         padding: 20px;
         background-color: #000000;
         box-shadow: 0 4px 8px rgb(255, 255, 255);
-        color: #ffffff;
+        color: #15ff00;
         border-radius: 10px;
         text-align: center; /* Căn giữa nội dung bên trong */
       }
@@ -62,15 +62,20 @@
         background-color: #000;
         color: #fff;
         margin: 5px;
-        padding: 10px 0;
-        width: 100px;
+        width: 100px; /* Chiều rộng nhỏ hơn */
+        height: 80px; /* Chiều cao bằng chiều rộng */
         border: 2px solid #ff3d00;
         border-radius: 10px;
         cursor: pointer;
         transition: background-color 0.3s;
         font-weight: bold;
         text-align: center;
+        display: flex; /* Căn giữa nội dung */
+        justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+        align-items: center; /* Căn giữa nội dung theo chiều dọc */
+        padding: 0; /* Bỏ padding để nút nhỏ gọn hơn */
       }
+
       .region-btn:hover {
         background-color: #ff3d00;
         transform: scale(1.05);
@@ -112,30 +117,32 @@
         }
       }
       .notification {
-        display: none;
+        display: none; /* Ẩn thông báo mặc định */
         position: fixed;
         top: 50%;
-        height: 300px;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #ffffff;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff; /* Màu nền */
+        padding: 20px; /* Tăng khoảng cách giữa nội dung và viền */
+        border-radius: 10px; /* Bo góc */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
         text-align: center;
         z-index: 1000;
+        border: 2px solid #ff3d00; /* Viền */
+        width: 400; /* Chiều rộng cố định */
+        height: 400px; /* Tự động điều chỉnh chiều cao theo nội dung */
+        max-height: 400px; /* Giới hạn chiều cao tối đa */
       }
       .notification img {
-        width: 50px;
-        height: 50px;
+        width: 100px;
+        height: 100px;
         margin-bottom: 10px;
       }
       .notification p {
-        font-size: 18px;
-        border: 2px solid #ff3d00;
+        font-size: 14px;
+
         font-weight: 700;
-        color: #000;
-        border: 2px solid #ff3d00;
+        color: #000000;
       }
       .button-link {
         display: inline-block;
@@ -160,8 +167,8 @@
         animation: scroll 20s linear infinite;
       }
       .banner-slider img {
-        width: 150px;
-        height: 100px;
+        width: 230px;
+        height: 150px;
         border: 2px solid #ffffff;
         margin: 0 10px;
         border-radius: 8px;
@@ -249,10 +256,10 @@
         alt="Logo"
       />
       <p>
-        Rất tiếc! Hiện tại bạn chưa được cấp quyền đặt lịch ngoài khu vực.<br />
-        Vui lòng đăng nhập mã đặt lịch để được trải nghiệm một cách trọn vẹn !!!
-        Nếu chưa có vui lòng bấm vào dưới đây hoặc liên hệ hỗ trợ viên để được
-        hỗ trợ
+        Rất tiếc! Hiện tại bạn chưa đang bị giới hạn vì chưa sử dụng dịch vụ<br />
+        Vui lòng nhập mã đặt lịch sử dụng dịch vụ để được trải nghiệm không giới
+        hạn !!! Nếu chưa có vui lòng bấm vào dưới đây hoặc liên hệ hỗ trợ viên
+        để được hỗ trợ
       </p>
       <a href="https://booknowlxr.github.io/girl1/" class="button-link"
         >Lấy mã đặt lịch</a
