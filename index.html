@@ -3,7 +3,7 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXURY GIRL BOOKING 🎀</title>
     <link
       rel="stylesheet"
@@ -19,57 +19,91 @@
     display: inline-block; /* Để nút nằm ngang */
     margin-top: 10px; /* Khoảng cách trên nút */
     padding: 10px 20px; /* Khoảng cách bên trong */
-    background-color: #ff3d00; /* Màu nền */
-    color: #000000; /* Màu chữ */
-    border: 2px solid #000000; /* Viền */
-    border-radius: 5px; /* Bo góc */
+    background-color: #000000; /* Nền đen */
+    color: #FFD700; /* Chữ màu bạc sáng */
+
+    border: 1px solid #D3D3D3; /* Viền màu bạc sáng */
+    border-radius: 10px;
     text-decoration: none; /* Bỏ gạch chân */
     font-weight: bold; /* Chữ đậm */
-    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Hiệu ứng đổ bóng */
 }
 
 .button-home:hover {
-    background-color: #ffffff; /* Màu nền khi hover */
-    transform: scale(1.05); /* Tăng kích thước khi hover */
+    background-color: #ffffff; /* Nền khi hover */
+    color: #1a1a1a; /* Chữ khi hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
 }
       body {
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        overflow-x: hidden;
+
+        background-color: #000000; /* Nền đen */
         margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-      }
-      .header {
-        text-align: center;
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        margin-bottom: 20px;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-      }
+        border: 1px solid #D3D3D3; /* Viền màu bạc sáng */
+        border-radius: 20px;
+}
+.header {
+    margin: 10px 0 20px; /* Khoảng cách trên, dưới */
+    padding: 20px; /* Khoảng cách bên trong */
+    background-color: #000000; /* Nền tối hơn */
+    color: #ffffff; /* Chữ màu vàng nhạt */
+    display: flex; /* Định dạng layout flex */
+    flex-direction: column; /* Bố trí theo cột */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    text-align: center; /* Căn giữa chữ */
+ 
+    border-radius: 10px; /* Góc bo tròn */
+    font-weight: bold; /* Chữ đậm */
+    letter-spacing: 1px; /* Khoảng cách giữa các ký tự */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Hiệu ứng bóng chữ */
+    cursor: pointer; /* Con trỏ chuột */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Hiệu ứng đổ bóng */
+}
+.header:hover {
+  
+    transform: scale(1.05); /* Phóng to khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Hiệu ứng đổ bóng tăng khi hover */
+}
       .header h1 {
-        font-size: 36px;
+        font-size: 30px;
       }
       h2 {
+        background-color: #000000; /* Nền tối */
         font-size: 27px;
-        color: #1eff00;
+        color: #ffffff; /* Chữ màu bạc sáng */
         text-align: center;
         margin: 0;
-      }
+     
+        border-radius: 10px;
+        border: 1px solid #D3D3D3; /* Viền màu bạc sáng */
+
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Hiệu ứng bóng chữ */
+    cursor: pointer; /* Con trỏ chuột */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Hiệu ứng đổ bóng */
+}
+
       .container {
-        width: 80%;
         max-width: 600px;
         margin: 0 auto; /* Căn giữa theo chiều ngang */
         padding: 20px;
-        background-color: #000000;
-        box-shadow: 0 4px 8px rgb(255, 255, 255);
-        color: #15ff00;
+        background-color: #1a1a1a; /* Nền đen */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Hiệu ứng đổ bóng */
+        color: #C0C0C0; /* Chữ màu bạc sáng */
         border-radius: 10px;
         text-align: center; /* Căn giữa nội dung bên trong */
+        font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #D3D3D3; /* Viền màu bạc sáng */
       }
       .region-list {
         display: flex;
@@ -78,45 +112,51 @@
         margin-top: 20px;
       }
       .region-btn {
-        background-color: #000;
-        color: #fff;
-        margin: 5px;
-        width: 100px; /* Chiều rộng nhỏ hơn */
-        height: 80px; /* Chiều cao bằng chiều rộng */
-        border: 2px solid #ff3d00;
+       
         border-radius: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
+        padding: 10px; 20px;
         font-weight: bold;
         text-align: center;
         display: flex; /* Căn giữa nội dung */
         justify-content: center; /* Căn giữa nội dung theo chiều ngang */
         align-items: center; /* Căn giữa nội dung theo chiều dọc */
-        padding: 0; /* Bỏ padding để nút nhỏ gọn hơn */
-      }
+        margin: 10px; /* Tăng khoảng cách giữa các nút */
+        background-color: #000000; /* Nền tối */
+    color: #C0C0C0; /* Chữ màu bạc sáng */
+    
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Hiệu ứng đổ bóng */
+}
+      
 
       .region-btn:hover {
-        background-color: #ff3d00;
+        background-color: #ffffff;
         transform: scale(1.05);
+        color: #000000; /* Chữ vàng */
       }
       .spinner-container {
         display: none;
         position: fixed;
         top: 50%;
+        color: #ffffff; /* Chữ vàng */
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         z-index: 1000;
-        border: 2px solid #ff3d00;
-        background-color: #fff;
+        border: 1px solid #ffffff; /* Viền vàng */
+ 
+        background-color: #000000; /* Nền màu bạc */
         border-radius: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 10px;
-        border: 2px solid #ff3d00;
         font-weight: 700;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 10px rgba(192, 192, 192, 0.6); /* Hiệu ứng đổ bóng màu bạc */
+   
+        border-radius: 10px;
       }
       .spinner {
         border: 8px solid #f3f3f3;
@@ -141,16 +181,18 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #ffffff; /* Màu nền */
+        background-color: #000000; /* Nền tối */
+
         padding: 20px; /* Tăng khoảng cách giữa nội dung và viền */
         border-radius: 10px; /* Bo góc */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
         text-align: center;
         z-index: 1000;
-        border: 2px solid #ff3d00; /* Viền */
-        width: 400; /* Chiều rộng cố định */
-        height: 400px; /* Tự động điều chỉnh chiều cao theo nội dung */
-        max-height: 400px; /* Giới hạn chiều cao tối đa */
+        color: #ffffff;
+        border: 2px solid #D3D3D3; /* Viền màu bạc sáng */
+        width: 300px;
+        height: 300px;
+
       }
       .notification img {
         width: 100px;
@@ -161,34 +203,40 @@
         font-size: 14px;
 
         font-weight: 700;
-        color: #000000;
+        color: #ffffff; /* Chữ màu bạc sáng */
+
       }
       .button-link {
         display: inline-block;
         margin-top: 10px;
         padding: 10px;
-        background-color: #ff3d00;
-        color: #ffffff;
-        border: 2px solid #ff3d00;
+        background-color: #ffffff; /* Nền đen */       
+        color: #000000; /* Chữ màu bạc sáng */
+    border: 2px solid #ffffff; /* Viền màu bạc sáng */
         border-radius: 5px;
+        font-weight: bold;
         text-decoration: none;
-      }
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Hiệu ứng đổ bóng */      }
       .button-link:hover {
-        background-color: #e65c00;
+        background-color: #00ff4c;
+        color: #000000; /* Chữ màu bạc sáng */
       }
       .banner-container {
         margin-top: 20px;
         overflow: hidden;
-        width: 100%;
+        width: 90%;
       }
       .banner-slider {
         display: flex;
         animation: scroll 20s linear infinite;
       }
       .banner-slider img {
-        width: 230px;
+        max-width: 200%;
+        height: 70px;
+
         height: 150px;
-        border: 2px solid #ffffff;
+        border: 2px solid #D3D3D3; /* Viền màu bạc sáng */
         margin: 0 10px;
         border-radius: 8px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -286,7 +334,7 @@
       <button
         id="closeNotification"
         class="button-link"
-        style="background-color: #000000"
+        style="background-color: #ffffff"
       >
         Đóng
       </button>
